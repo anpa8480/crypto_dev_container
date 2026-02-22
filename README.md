@@ -1,9 +1,12 @@
 ```console
-docker build -t elektrobit/ubuntu-jammy-docker:dev .
+VERSION=$(git describe --tags --always)
 ```
 ```console
-docker tag elektrobit/ubuntu-jammy-docker:dev ghcr.io/anpa8480/ubuntu-jammy-docker:dev
+docker build -t elektrobit/ubuntu-jammy-docker:$VERSION .
 ```
 ```console
-docker push ghcr.io/anpa8480/ubuntu-jammy-docker:dev
+docker tag elektrobit/ubuntu-jammy-docker:$VERSION ghcr.io/anpa8480/ubuntu-jammy-docker:$VERSION
+```
+```console
+docker tag elektrobit/ubuntu-jammy-docker:$VERSION ghcr.io/anpa8480/ubuntu-jammy-docker:$VERSION
 ```
