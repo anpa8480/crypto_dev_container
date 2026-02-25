@@ -8,5 +8,5 @@ docker build -t elektrobit/ubuntu-jammy-docker:$VERSION .
 docker tag elektrobit/ubuntu-jammy-docker:$VERSION ghcr.io/anpa8480/ubuntu-jammy-docker:$VERSION
 ```
 ```console
-docker tag elektrobit/ubuntu-jammy-docker:$VERSION ghcr.io/anpa8480/ubuntu-jammy-docker:$VERSION
+docker push ghcr.io/anpa8480/ubuntu-jammy-docker:$VERSION
 ```
